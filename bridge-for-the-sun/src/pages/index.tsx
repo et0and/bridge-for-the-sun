@@ -3,6 +3,7 @@ import Head from "next/head";
 
 const HomePage: React.FC = () => {
   const [gradient, setGradient] = useState("");
+  const [themeColor, setThemeColor] = useState("#ffffff");
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -11,28 +12,36 @@ const HomePage: React.FC = () => {
       const minute = now.getMinutes();
 
       let gradientClasses = "";
+      let color = "";
 
       if (hour >= 18 || (hour === 17 && minute >= 30)) {
         // 6PM - 9PM
         gradientClasses = "from-black via-blue-950 to-purple-950";
+        color = "#0a192f"; // midnight blue
       } else if (hour >= 21 || (hour === 20 && minute >= 30)) {
         // 9PM - 4AM
         gradientClasses = "from-black to-indigo-950";
+        color = "#0a192f"; // midnight blue
       } else if (hour >= 4 && hour < 6) {
         // 4AM - 6AM
         gradientClasses = "from-blue-900 via-yellow-900 to-orange-950";
+        color = "#0369a1"; // night blue
       } else if (hour >= 6 && hour < 8) {
         // 6AM - 8AM
         gradientClasses = "from-sky-500 via-yellow-600 to-orange-700";
+        color = "#0284c7"; // morning blue
       } else if (hour >= 8 && hour < 15) {
         // 8AM - 3PM
         gradientClasses = "from-sky-300 via-yellow-200 to-sky-500";
+        color = "#0ea5e9"; // day blue
       } else {
         // 3PM - 6PM
         gradientClasses = "from-yellow-300 via-orange-500 to-sky-900";
+        color = "#0369a1"; // evening blue
       }
 
       setGradient(`${gradientClasses} h-screen w-screen bg-gradient-to-b`);
+      setThemeColor(color);
     }, 1000);
 
     return () => clearInterval(interval);
@@ -45,6 +54,7 @@ const HomePage: React.FC = () => {
         <meta property="og:title" content="Bridge for the Sun" key="title" />
         <meta property="twitter:title" content="Bridge for the Sun" />
         <meta property="og:type" content="website" />
+        <meta name="theme-color" content={themeColor} />
         <meta
           property="description"
           content="Wherever I am, I look to the sun and think of you (for Esmé)"
