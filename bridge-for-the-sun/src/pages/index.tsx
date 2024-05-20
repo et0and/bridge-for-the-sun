@@ -17,27 +17,27 @@ const HomePage: React.FC = () => {
       if (hour >= 18 || (hour === 17 && minute >= 30)) {
         // 6PM - 9PM
         gradientClasses = "from-black via-blue-950 to-purple-950";
-        color = "#0a192f"; // midnight blue
+        color = "#000000"; // midnight blue
       } else if (hour >= 21 || (hour === 20 && minute >= 30)) {
         // 9PM - 4AM
         gradientClasses = "from-black to-indigo-950";
-        color = "#0a192f"; // midnight blue
+        color = "#000000"; // midnight blue
       } else if (hour >= 4 && hour < 6) {
         // 4AM - 6AM
         gradientClasses = "from-blue-900 via-yellow-900 to-orange-950";
-        color = "#0369a1"; // night blue
+        color = "#1e3a8a"; // night blue
       } else if (hour >= 6 && hour < 8) {
         // 6AM - 8AM
         gradientClasses = "from-sky-500 via-yellow-600 to-orange-700";
-        color = "#0284c7"; // morning blue
+        color = "#0ea5e9"; // morning blue
       } else if (hour >= 8 && hour < 15) {
         // 8AM - 3PM
         gradientClasses = "from-sky-300 via-yellow-200 to-sky-500";
-        color = "#0ea5e9"; // day blue
+        color = "#7dd3fc"; // day blue
       } else {
         // 3PM - 6PM
         gradientClasses = "from-yellow-300 via-orange-500 to-sky-900";
-        color = "#0369a1"; // evening blue
+        color = "#fde047"; // evening blue
       }
 
       setGradient(`${gradientClasses} h-screen w-screen bg-gradient-to-b`);
