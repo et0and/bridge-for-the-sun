@@ -44,6 +44,7 @@ const HomePage: React.FC = () => {
         <title>Bridge for the Sun</title>
         <meta property="og:title" content="Bridge for the Sun" key="title" />
         <meta property="twitter:title" content="Bridge for the Sun" />
+        <meta property="og:type" content="website" />
         <meta
           property="description"
           content="Wherever I am, I look to the sun and think of you (for Esmé)"
