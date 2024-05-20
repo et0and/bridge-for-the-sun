@@ -41,20 +41,20 @@ const HomePage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Bridge for the sun</title>
-        <meta property="og:title" content="Bridge for the sun" key="title" />
-        <meta property="twitter:title" content="Bridge for the sun" />
+        <title>Bridge for the Sun</title>
+        <meta property="og:title" content="Bridge for the Sun" key="title" />
+        <meta property="twitter:title" content="Bridge for the Sun" />
         <meta
           property="description"
-          content="Wherever I am, I look to the sun and think of you (for Esmé) "
+          content="Wherever I am, I look to the sun and think of you (for Esmé)"
         />
         <meta
           property="og:description"
-          content="Wherever I am, I look to the sun and think of you (for Esmé) "
+          content="Wherever I am, I look to the sun and think of you (for Esmé)"
         />
         <meta
           property="twitter:description"
-          content="Wherever I am, I look to the sun and think of you (for Esmé) "
+          content="Wherever I am, I look to the sun and think of you (for Esmé)"
         />
         <meta
           property="og:url"
